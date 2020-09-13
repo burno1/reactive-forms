@@ -9,10 +9,11 @@ import { NestedFormComponent } from './nested-form/nested-form.component';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 import { ArrayFormComponent } from './array-form/array-form.component';
 
-
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule, MatSelectModule } from '@angular/material';
-
+import { MatChipsModule, MatInputModule, MatSelectModule } from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
+import { ValidationFormComponent } from './validation-form/validation-form.component'; 
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatInputModule, MatSelectModule } from '@angular/material';
     BasicFormComponent,
     NestedFormComponent,
     SubmitFormComponent,
-    ArrayFormComponent
+    ArrayFormComponent,
+    ValidationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,10 @@ import { MatInputModule, MatSelectModule } from '@angular/material';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
